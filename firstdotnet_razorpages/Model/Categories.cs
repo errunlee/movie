@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace firstdotnet.Models {
+namespace firstdotnet_razorpages.Model {
     public class Category {
         [Key]
         public int Cateogry_Id { get; set; }
