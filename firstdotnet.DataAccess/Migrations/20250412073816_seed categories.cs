@@ -4,14 +4,11 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace firstdotnet.Migrations
-{
+namespace firstdotnet.DataAccess.Migrations {
     /// <inheritdoc />
-    public partial class seedcategories : Migration
-    {
+    public partial class seedcategories : Migration {
         /// <inheritdoc />
-        protected override void Up(MigrationBuilder migrationBuilder)
-        {
+        protected override void Up(MigrationBuilder migrationBuilder) {
             migrationBuilder.InsertData(
                 table: "Categories",
                 columns: new[] { "Cateogry_Id", "DisplayOrder", "Name" },
@@ -24,8 +21,7 @@ namespace firstdotnet.Migrations
         }
 
         /// <inheritdoc />
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
+        protected override void Down(MigrationBuilder migrationBuilder) {
             migrationBuilder.DeleteData(
                 table: "Categories",
                 keyColumn: "Cateogry_Id",

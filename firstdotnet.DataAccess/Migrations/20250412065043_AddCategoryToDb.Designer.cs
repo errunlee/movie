@@ -2,17 +2,20 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using firstdotnet.Data;
+using firstdotnet.DataAccess.Data;
 
 #nullable disable
 
-namespace firstdotnet.Migrations
+namespace firstdotnet.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250412065043_AddCategoryToDb")]
+    partial class AddCategoryToDb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,26 +42,6 @@ namespace firstdotnet.Migrations
                     b.HasKey("Cateogry_Id");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Cateogry_Id = 1,
-                            DisplayOrder = 1,
-                            Name = "Action"
-                        },
-                        new
-                        {
-                            Cateogry_Id = 2,
-                            DisplayOrder = 1,
-                            Name = "SciFi"
-                        },
-                        new
-                        {
-                            Cateogry_Id = 3,
-                            DisplayOrder = 1,
-                            Name = "Comedy"
-                        });
                 });
 #pragma warning restore 612, 618
         }

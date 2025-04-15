@@ -1,7 +1,6 @@
-﻿using firstdotnet.Data;
-using firstdotnet.Models;
+﻿using firstdotnet.DataAccess.Data;
+using firstdotnet.Models.Models;
 using Microsoft.AspNetCore.Mvc;
-
 namespace firstdotnet.Controllers {
     public class CategoryController : Controller {
         private ApplicationDbContext _db;
