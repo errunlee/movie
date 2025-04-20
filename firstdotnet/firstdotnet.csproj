@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\NewFolder1\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\firstdotnet.DataAccess\firstdotnet.DataAccess.csproj" />
     <ProjectReference Include="..\firstdotnet.Models\firstdotnet.Models.csproj" />
   </ItemGroup>

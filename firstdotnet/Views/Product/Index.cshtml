@@ -1,0 +1,29 @@
+﻿@model List<Product>
+
+@{
+    ViewData["Title"] = "Product";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Products</h2>
+        <a asp-action="Add" class="btn btn-primary">Add New Product</a>
+    </div>
+
+    <div class="row">
+        @foreach (var product in Model.OrderBy(p => p.Title)) {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Title</h5>
+                        <p class="card-text text-muted">@product.Description</p>
+                        <p><strong>Author:</strong> @product.Author</p>
+                        <p><strong>ISBN:</strong> @product.ISBN</p>
+                        <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-sm btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
